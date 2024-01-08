@@ -1,0 +1,17 @@
+<!-- templates/question_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question List</title>
+</head>
+<body>
+    <h1>Question List</h1>
+    <ul>
+        {% for question in questions %}
+            <li>
+                <a href="{% url 'choice_list' question.id %}">{{ question.question_text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

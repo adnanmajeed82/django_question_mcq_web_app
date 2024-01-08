@@ -1,0 +1,15 @@
+<!-- templates/choice_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choice List</title>
+</head>
+<body>
+    <h1>Choices for Question</h1>
+    <ul>
+        {% for choice in choices %}
+            <li>{{ choice.choice_text }} - Votes: {{ choice.votes }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
